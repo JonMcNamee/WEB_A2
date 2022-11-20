@@ -26,7 +26,6 @@ img {
 body,html {
     margin:0;
     padding:0;
-    background-color: #3E3E42;
 }
 
 .header {
@@ -117,12 +116,16 @@ body,html {
         font-size: 2em;
         color:#007acc;
     }
+    body {
+        background-color: #1e1e1e;
+    }
 }
 
 /* for tablets */
 @media screen and (min-device-width: 769px) {
     .footer {
         margin-top:10%;
+        background: #2d2d30;
     }
 
     .cards {
@@ -158,12 +161,15 @@ body,html {
         font-size: 2em;
         color:#007acc;
     }
+    body {
+        background-color: #252526;
+    }
 
 }
 
 @media screen and (min-device-width: 1201px) {
     .footer {
-        margin-top:10%;
+        margin-top:12%;
         grid-column: span 2;
     }
     .cards {
@@ -210,8 +216,14 @@ body,html {
     .nav {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(7, 1fr);
+        height: 125%;
+        align-items: center;
+        padding: 1fr;
     }
     .nav a {
         border: none;
+    }
+    body {
+        background-color: #3E3E42;
     }
 }

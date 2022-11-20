@@ -155,9 +155,61 @@ body {
     }
 }
 
-@media screen and (min-device-width 1201px) {
+@media screen and (min-device-width: 1201px) {
     
     body {
         background: #3E3E42;
+    }
+    .recipeName, .footer, .prepServe, .header {
+        grid-column: span 3;
+    }
+    .content {
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: 20% 45% 35%;
+    }
+    .nav {
+        grid-column: span 1;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, 1fr);
+        height: 510%;
+        align-items: center;
+        padding: 1fr;
+    }
+    .nav a {
+        border: none;
+    }
+    #prep, #serve {
+        background:#455845;
+    }
+    img {
+        grid-column-start: 1;
+    }
+    .instructions {
+        grid-column-start: 1;
+    }
+
+    .footer {
+        margin-top: 25%;
+        grid-column: span 3;
+    }
+    .recipeName {
+        position: relative;
+        margin-top: -250px;
+    }
+    img {
+        margin-left: 40%;
+    }
+    .prepServe {
+        display: relative;
+        margin-top: -250px;
+    }
+    #prep {
+        margin-left: 45%;
+    }
+    .instructions {
+        grid-column: span 3;
+        width: 33%;
+        margin-top: 45px;
+        margin-left: 33%;
     }
 }

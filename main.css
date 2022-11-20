@@ -28,42 +28,55 @@ body,html {
     padding:0;
     background-color: #3E3E42;
 }
+
+.header {
+    background-color: maroon;
+    text-align: center;
+    color: darkgrey;
+    width: 100%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    box-sizing: border-box;
+    border: solid thin rgb(61, 60, 60);
+}
+
+.nav {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #252526;
+    box-sizing: border-box;
+    font-size: larger;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+.nav a {
+    text-decoration: none;
+    color: aliceblue;
+    border-right: solid white;
+    padding: 10px;
+}
+.nav :nth-child(7) {border: none;}
+.nav a:hover {
+    background-color: red;
+    text-decoration: underline;
+}
+.footer {
+    background-color: #252526;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    box-sizing: border-box;
+}
+#chicken-image {
+    height: 250px;
+}
 /* for mobile */
 
 @media screen and (max-device-width: 768px) {
-    .header {
-        background-color: maroon;
-        text-align: center;
-        color: darkgrey;
-        width: 100%;
-        margin: 0%;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0%;
-        box-sizing: border-box;
-        border: solid thin rgb(61, 60, 60);
-    }
-    
-    .nav {
-        width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #252526;
-        box-sizing: border-box;
-        font-size: larger;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        text-align: center;
-    }
-    .nav a {
-        text-decoration: none;
-        color: aliceblue;
-        border-right: solid white;
-        padding: 10px;
-    }
-    .nav :nth-child(7) {border: none;}
-    .nav a:hover {
-        background-color: red;
-        text-decoration: underline;
-    }
+
     
     .footer {
         background-color: #252526;
@@ -108,9 +121,97 @@ body,html {
 
 /* for tablets */
 @media screen and (min-device-width: 769px) {
+    .footer {
+        margin-top:10%;
+    }
+
+    .cards {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, 1fr);
+        height: fit-content;
+        gap: 3%;
+    }
+    .card {
+        height: auto;
+        width: 85%;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        text-align: center;
+        border-radius: 10px;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+    }
+    .card:first-child {
+        margin-top: 35px;
+    }
+    .card:nth-child(2) {
+        margin-top: 35px;
+    }
+    .description {
+        text-align: left;
+        margin: 20px;
+        background-color: #007acc;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .card-title {
+        font-size: 2em;
+        color:#007acc;
+    }
 
 }
 
 @media screen and (min-device-width: 1201px) {
+    .footer {
+        margin-top:10%;
+        grid-column: span 2;
+    }
+    .cards {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, 1fr);
+        height: fit-content;
+        gap: 3%;
+    }
+    .card {
+        height: auto;
+        width: 85%;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        text-align: center;
+        border-radius: 10px;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+    }
+    .card:first-child, .card:nth-child(2), .card:nth-child(3) {
+        margin-top: 35px;
+    }
+    img {
+        display: flex;
+    }
+    .description {
+        text-align: left;
+        margin: 20px;
+        background-color: #007acc;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .card-title {
+        font-size: 2em;
+        color:#007acc;
+    }
 
+    .content {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 20% 80%;
+    }
+    .header {
+        grid-column: span 2;
+    }
+    .nav {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+    }
+    .nav a {
+        border: none;
+    }
 }
